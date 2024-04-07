@@ -1,0 +1,142 @@
+###
+POST http://localhost:3000/api/user/register
+Content-Type: application/json
+
+{
+    "email":"prueba@gmail.com",
+    "password":"hello1234"
+}
+
+###
+POST http://localhost:3000/api/user/login
+Content-Type: application/json
+
+{
+    "email":"prueba@gmail.com",
+    "password":"hello1234"
+}
+
+###
+GET http://localhost:3000/api/user/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWZjNjAzMTQyZGE2NTY4ZGI1Y2M2MzIiLCJpYXQiOjE3MTEwMzg3NDMsImV4cCI6MTcxMTA0NTk0M30.6Eezh-FEEv4bB__AGIVxx1Hhckf1pHUSTIvF2QdF07w
+
+###
+GET http://localhost:3000/api/user/65fc67575311f3853a02ccb6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWZjNjAzMTQyZGE2NTY4ZGI1Y2M2MzIiLCJpYXQiOjE3MTE2MzU0MzYsImV4cCI6MTcxMTY0MjYzNn0.Q_dBRXkk7XTNlv-OgLaaoSrUT6r_fL_Nw3WYN4KGApY
+
+###
+GET http://localhost:3000/api/user/followers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWZjNjAzMTQyZGE2NTY4ZGI1Y2M2MzIiLCJpYXQiOjE3MTEwMzg3NDMsImV4cCI6MTcxMTA0NTk0M30.6Eezh-FEEv4bB__AGIVxx1Hhckf1pHUSTIvF2QdF07w
+
+###
+GET http://localhost:3000/api/user/following
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWZjNjAzMTQyZGE2NTY4ZGI1Y2M2MzIiLCJpYXQiOjE3MTEwMzg3NDMsImV4cCI6MTcxMTA0NTk0M30.6Eezh-FEEv4bB__AGIVxx1Hhckf1pHUSTIvF2QdF07w
+
+###
+GET  http://localhost:3000/api/user/filter?lookingFor=colaborar&country=Mexico&language=Español
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWZjNjAzMTQyZGE2NTY4ZGI1Y2M2MzIiLCJpYXQiOjE3MTEwMzg3NDMsImV4cCI6MTcxMTA0NTk0M30.6Eezh-FEEv4bB__AGIVxx1Hhckf1pHUSTIvF2QdF07w
+
+###
+PATCH  http://localhost:3000/api/user/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWZjNjAzMTQyZGE2NTY4ZGI1Y2M2MzIiLCJpYXQiOjE3MTEwMzg3NDMsImV4cCI6MTcxMTA0NTk0M30.6Eezh-FEEv4bB__AGIVxx1Hhckf1pHUSTIvF2QdF07w
+Content-Type: application/json
+
+{
+  "email": "prueba@gmail.com",
+  "password": "hello1234",
+  "name": "Nombre Usuario",
+  "location": {
+    "country": "País",
+    "city": "Ciudad"
+  },
+  "image": "url-de-imagen.jpg",
+  "description": "Una breve descripción del usuario.",
+  "following": [],
+  "followers": [],
+  "config": {
+    "search_projects": true,
+    "search_users": true
+  },
+  "projects": [],
+  "articles": [],
+  "profile": {
+    "contact": {
+      "email": "prueba@gmail.com",
+      "linkedin": "perfil-linkedin",
+      "web": "https://ejemplo.com",
+      "twitter": "@usuarioTwitter",
+      "instagram": "@usuarioInstagram"
+    },
+    "habilities": ["Habilidad 1", "Habilidad 2"],
+    "projects": [
+      {
+        "name": "Nombre del Proyecto",
+        "location": "Ubicación del Proyecto",
+        "image": "url-de-imagen-proyecto.jpg",
+        "description": "Descripción del proyecto.",
+        "startDate": "2024-01-01",
+        "endDate": "2024-12-31"
+      }
+    ],
+    "interest": ["Interés 1", "Interés 2"],
+    "languages": ["Idioma 1", "Idioma 2"]
+  },
+  "saved_projects": [],
+  "saved_articles": []
+
+}
+
+###
+POST http://localhost:3000/api/project
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWZjNjAzMTQyZGE2NTY4ZGI1Y2M2MzIiLCJpYXQiOjE3MTEwNDQ3NzYsImV4cCI6MTcxMTA1MTk3Nn0.K5t1DijXpeMPJV-IxXES8weSwJpk4CIuz0Idwh58tiM
+Content-Type: application/json
+
+{
+    "name": "projecto nuevo"
+}
+
+###
+GET http://localhost:3000/api/project/user-project
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWZjNjAzMTQyZGE2NTY4ZGI1Y2M2MzIiLCJpYXQiOjE3MTEwNDQ3NzYsImV4cCI6MTcxMTA1MTk3Nn0.K5t1DijXpeMPJV-IxXES8weSwJpk4CIuz0Idwh58tiM
+
+
+###
+PATCH http://localhost:3000/api/project/65fc794a515b221271dcfe4e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWZjNjAzMTQyZGE2NTY4ZGI1Y2M2MzIiLCJpYXQiOjE3MTEwNDQ3NzYsImV4cCI6MTcxMTA1MTk3Nn0.K5t1DijXpeMPJV-IxXES8weSwJpk4CIuz0Idwh58tiM
+Content-Type: application/json
+
+{
+    "name": "projecto nuevo CAMBIO NOMBRE"
+}
+
+###
+GET http://localhost:3000/api/project/filter?type=colaborar&country=España&category=tecnología
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWZjNjAzMTQyZGE2NTY4ZGI1Y2M2MzIiLCJpYXQiOjE3MTEwNDQ3NzYsImV4cCI6MTcxMTA1MTk3Nn0.K5t1DijXpeMPJV-IxXES8weSwJpk4CIuz0Idwh58tiM
+
+###
+POST http://localhost:3000/api/article
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWZjNjAzMTQyZGE2NTY4ZGI1Y2M2MzIiLCJpYXQiOjE3MTEwNDQ3NzYsImV4cCI6MTcxMTA1MTk3Nn0.K5t1DijXpeMPJV-IxXES8weSwJpk4CIuz0Idwh58tiM
+Content-Type: application/json
+
+{
+    "name": "articulo nuevo",
+    "description": "Esta es la descripción"
+}
+
+###
+PATCH http://localhost:3000/api/article/65fc81e2bcf39c45965505f8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWZjNjAzMTQyZGE2NTY4ZGI1Y2M2MzIiLCJpYXQiOjE3MTEwNDQ3NzYsImV4cCI6MTcxMTA1MTk3Nn0.K5t1DijXpeMPJV-IxXES8weSwJpk4CIuz0Idwh58tiM
+Content-Type: application/json
+
+{
+    "name": "nuevo articulo"
+}
+
+###
+GET http://localhost:3000/api/article/filter?country=México&language=Español&category=tecnología
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWZjNjAzMTQyZGE2NTY4ZGI1Y2M2MzIiLCJpYXQiOjE3MTEwNDQ3NzYsImV4cCI6MTcxMTA1MTk3Nn0.K5t1DijXpeMPJV-IxXES8weSwJpk4CIuz0Idwh58tiM
+
+
+###
+GET http://localhost:3000/api/article/user-articles
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWZjNjAzMTQyZGE2NTY4ZGI1Y2M2MzIiLCJpYXQiOjE3MTE1NTEzMTEsImV4cCI6MTcxMTU1ODUxMX0.zMUBUpa9V019ofv6UkEIipWip4BySA2gcQwPu3DLGFQ

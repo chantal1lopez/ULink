@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-container {
+  background-image: url("/images/fondo_pantalla.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo-symbol {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: auto;
+}
+
+.logo-name {
+  margin-bottom: 10px;
+  width: 350px;
+  height: auto;
+  display: flex;
+}
+
+.login-form {
+  background: rgba(0, 0, 0, 0.8);
+  width: 450px;
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form .input-group input {
+  width: 250px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 18px;
+}
+
+.login-button {
+  width: 270px;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #61c1ea;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  width: 270px;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #3f99c0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.register-button {
+  margin-top: 20px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  margin-top: 20px;
+  background: transparent;
+  border: none;
+  color: #61c1ea;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.horizontal-menu {
+  position: absolute;
+  top: 35px;
+  right: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.horizontal-button {
+  margin-right: 20px;
+  background: transparent;
+  border: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.horizontal-button:hover {
+  margin-right: 20px;
+  background: transparent;
+  border: none;
+  color: #505050;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.error-message {
+  color: #f1f1f1;
+  font-weight: bold;
+  font-size: 0.7em;
+  margin-bottom: 0;
+}

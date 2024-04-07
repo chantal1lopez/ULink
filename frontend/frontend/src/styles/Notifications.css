@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.initial-container {
+  display: flex;
+  height: 100vh;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.filter-container {
+  margin-top: 12em;
+  margin-left: 10em;
+}
+
+.notification-dashboard-content {
+  margin-top: 8em;
+  width: calc(100% - 250px - 40px);
+  margin: 20px;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.background {
+  background-image: url("/images/fondo_pantalla_2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.row-menu-notifications {
+  display: flex;
+  flex-direction: row;
+  margin-top: 6.5em;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.menu-option {
+  border: 1px solid #000000;
+  border-radius: 20px;
+  padding-left: 3.5em;
+  padding-right: 3.5em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2em;
+}
+
+.active {
+  border: 3px solid #61c1ea;
+  border-radius: 20px;
+  padding-left: 3.5em;
+  padding-right: 3.5em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+.notification-content {
+  width: 45%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2em;
+  border: 1px solid #d9d9d9;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 2em;
+}
+
+.notification-name {
+  font-weight: bold;
+}
+
+.notification-action {
+  margin-left: 0.8em;
+}
+
+.notification-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.notification-btn.accept {
+  background-color: #4caf50; 
+  color: white;
+}
+
+.notification-btn.reject {
+  background-color: #f44336;
+  color: white;
+  margin-left: 5px;
+}
+
+.connection-request {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 16px 0;
+}
+
+.request-content p {
+  margin: 1em 0 1em;
+}
+
+.buttons-notifications {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-connect,
+.btn-message,
+.btn-acceptance {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-connect {
+  background-color: #61c1ea;
+  color: white;
+}
+
+.btn-message,
+.btn-acceptance {
+  background-color: transparent;
+  color: #61c1ea;
+  border: 2px solid #61c1ea;
+}
